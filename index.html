@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <style>
+        h1 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div ng-app="mainApp" ng-controller="mainAppController as mainCtrl">
+
+        <h1 style="color: red">{{mainCtrl.name}}</h1>
+
+        <div ng-app="appOne" ng-controller="appOneController as oneCtrl">
+
+            <h1 style="color: blue">{{oneCtrl.name}}</h1>
+
+        </div>
+        <div ng-app="appTwo" ng-controller="appTwoController as twoCtrl">
+
+            <h1 style="color: green">{{twoCtrl.name}}</h1>
+
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/mainAppController.js"></script>
+    <script src="app_one/app.js"></script>
+    <script src="app_one/controllers/appOneController.js"></script>
+    <script src="app_two/app.js"></script>
+    <script src="app_two/controllers/appTwoController.js"></script>
+
+</body>
+
+</html>
